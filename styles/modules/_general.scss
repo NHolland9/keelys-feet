@@ -1,0 +1,126 @@
+//  GENERAL STYLES
+@import "_colors";
+
+//MIXINS
+@mixin no-marg {
+  margin: 0;
+  padding: 0;
+}
+
+//  GENERAL STYLES
+body {
+  @include no-marg;
+  font-family: "Roboto", Arial, sans-serif;
+}
+
+h2, h3, h4, p, ul {
+  @include no-marg;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h2 {
+  font-weight: 500;
+}
+
+h3, h4 {
+  font-weight: normal;
+}
+
+.break {
+  clear: both;
+}
+
+
+//  LAYOUT STYLES
+.content-wrapper {
+  margin: 50px 0 100px 0;
+}
+
+.page-title {
+  color: $blue;
+  margin: 50px auto 15px auto;
+  text-align: center;
+}
+
+.page-text {
+  margin: 0 12px;
+  color: $green;
+  text-align: justify;
+}
+
+
+//  PRICE TABLE STYLES
+.price-table {
+  text-align: center;
+  border: 1px solid $border;
+  border-collapse: collapse;
+  margin: 80px auto 30px auto;
+}
+
+.price-table--web {
+  display: none;
+}
+
+.price-table__header {
+  border: 1px solid $border;
+  padding: 10px;
+  color: $blue;
+  background-color: $grey;
+  font-weight: normal;
+  font-size: 1.2em;
+}
+
+.price-table__item {
+  border: 1px solid $border;
+  padding: 10px;
+  color: $green;
+  width: 150px;
+}
+
+
+@media(min-width: 600px) {
+
+  .page-title {
+    margin-bottom: 30px;
+  }
+
+  .page-text {
+    margin: 0 50px 100px 50px;
+  }
+
+  .price-table--mobile {
+    display: none;
+  }
+
+  .price-table--web {
+    display: table;
+  }
+
+}
+
+
+@media(min-width: 900px) {
+
+  .page-text {
+    margin: 0 auto 100px auto;
+    max-width: 800px;
+  }
+
+  .page-text--centre {
+    text-align: center;
+  }
+
+}
+
+
+@media(min-width: 1500px) {
+
+  .page-text {
+    max-width: 950px;
+  }
+
+}

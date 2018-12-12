@@ -1,0 +1,150 @@
+//  HEADER.SCSS
+@import "_colors";
+
+
+//  GENERAL HEADER STYLES
+header {
+  text-align: center;
+  background-color: white;
+  box-shadow: 0 2px 5px $grey;
+}
+
+
+//  MOBILE TOPBAR STYLES
+.mobile-topbar__title-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: left;
+  align-items: center;
+  color: $green;
+}
+
+.mobile-topbar__logo {
+  padding-top: 20px;
+  width: 70px;
+}
+
+.mobile-topbar__titles {
+  padding: 15px 0 0 15px;
+}
+
+.mobile-topbar__btn-title {
+  color: $blue;
+  margin: 18px 0 14px 0;
+  display: inline-block;
+}
+
+.mobile-topbar__arrow {
+  position: relative;
+  top: 5px;
+}
+
+.mobile-topbar__arrow--hidden {
+  display: none;
+}
+
+
+//DROPDOWN NAVIGATION STYLES
+.dropdown-nav {
+  border-bottom: 1px solid $border;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  display: none;
+}
+
+.dropdown-nav__item {
+  color: $green;
+  list-style: none;
+  background-color: $grey;
+  border-top: 1px solid $border;
+  padding: 10px 0 9px 0;
+}
+
+.dropdown-nav__item:hover {
+  background-color: $darkgrey;
+}
+
+
+//TOPBAR STYLES
+.topbar-wrapper {
+  display: none;
+  margin: 10px 0 2px 0;
+  color: $green;
+}
+
+.topbar {
+  float: left;
+}
+
+.topbar__logo {
+  padding: 10px 30px 0 0;
+  float: left;
+  width: 100px;
+}
+
+.topbar__titles {
+  text-align: left;
+  display: inline-block;
+  margin: 25px 0 25px 70px;
+  font-size: 1.1em;
+  float: left;
+}
+
+.topbar__contacts {
+  text-align: right;
+  margin: 33px 70px 25px 0;
+  font-size: 0.9em;
+  float: right;
+}
+
+
+//TOP NAVIGATION STYLES
+.top-nav {
+  display: flex;
+  flex-direction: row;
+  font-weight: 500;
+  font-size: 0.9em;
+}
+
+.top-nav__item {
+  height: 36px;
+  padding: 18px 35px 2px 35px;
+  transition: 0.25s;
+}
+
+.top-nav__item--two-line {
+  padding: 10px 35px;
+}
+
+.top-nav__item:hover, .top-nav__item--active-page {
+  border-bottom: 7px solid $blue;
+  padding: 0px 35px 20px 35px;
+}
+
+
+@media(min-width: 600px) {
+
+  .mobile-topbar__logo {
+    width: 90px;
+  }
+
+  .mobile-topbar__titles {
+    padding-left: 25px;
+  }
+
+}
+
+
+@media(min-width: 900px) {
+
+  .mobile-topbar {
+    display: none;
+  }
+
+  .topbar-wrapper {
+    display: inline-block;
+  }
+
+}

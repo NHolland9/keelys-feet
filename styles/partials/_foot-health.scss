@@ -1,0 +1,62 @@
+//  FOOT HEALTH SERVICES STYLES
+@import "../modules/_colors";
+
+
+//  ACCORDION STYLES
+.accordion {
+  margin: 50px 12px;
+  border-top: 1px solid $border;
+}
+
+.accordion__title {
+  background-color: $grey;
+  color: $blue;
+  border: 1px solid $border;
+  border-top: none;
+  padding: 10px 10px 10px 30px;
+}
+
+.accordion__title:hover {
+  background-color: $darkgrey;
+}
+
+.accordion__title--active-panel {
+  background-color: $darkgrey;
+}
+
+.accordion__text {
+  background-color: $cream;
+  color: $green;
+  border: 1px solid $border;
+  border-top: none;
+  padding: 30px 60px;
+}
+
+
+@media(min-width: 600px) {
+
+  .accordion {
+    margin: 30px 50px;
+  }
+
+}
+
+
+@media(min-width: 900px) {
+
+  .accordion {
+    width: 80%;
+    margin: 50px auto;
+  }
+
+}
+
+
+@media(min-width: 1200px) {
+
+  .accordion {
+    width: 70%;
+    max-width: 1050px;
+  }
+
+}
